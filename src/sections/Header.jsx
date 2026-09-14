@@ -1,6 +1,6 @@
 function Header() {
     return (
-        <header className="flex items-center justify-between px-8 py-4 bg-[#faf3ec]">
+        <header className="sticky top-0 z-50 flex items-center justify-between border-b border-[#f0e9e0] bg-[#faf3ec]/90 px-8 py-4 shadow-sm backdrop-blur-sm">
             <a href="#inicio" className="text-xl font-serif font-bold text-[#3d2418]">
                 Maison <span className="italic">Cake</span>
             </a>

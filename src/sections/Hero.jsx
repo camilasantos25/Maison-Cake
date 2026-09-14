@@ -31,7 +31,7 @@ function Hero() {
                     <img
                         src={boloHero}
                         alt="Bolo de chocolate decorado com morangos"
-                        className="h-[500px] w-full rounded-3xl object-cover"
+                        className="h-[600px] w-full rounded-3xl object-cover"
                     />
                     <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white px-6 py-4 shadow-lg">
                         <p className="font-serif text-2xl font-bold text-[#a05a3f]">+200</p>
