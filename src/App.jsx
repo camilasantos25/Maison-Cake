@@ -1,6 +1,7 @@
 import Cardapio from "./sections/Cardapio"
 import Header from "./sections/Header"
 import Hero from "./sections/Hero"
+import SobreNos from "./sections/SobreNos"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Cardapio />
+      <SobreNos />
     </div>
   )
 }
