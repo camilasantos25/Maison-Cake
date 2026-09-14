@@ -18,9 +18,9 @@ function Hero() {
                         dedicação que só a confeitaria artesanal pode oferecer.
                     </p>
                     <div className="mt-8 flex gap-4">
-                        <button className="cursor-pointer rounded-full bg-[#3d2418] px-6 py-3 text-sm text-white transition-colors hover:bg-[#a05a3f]">
+                        <a href='#bolos' className="cursor-pointer rounded-full bg-[#3d2418] px-6 py-3 text-sm text-white transition-colors hover:bg-[#a05a3f]">
                             Ver nossos bolos
-                        </button>
+                        </a>
                         <button className="cursor-pointer rounded-full border border-[#3d2418] px-6 py-3 text-sm text-[#3d2418] transition-colors hover:border-[#a05a3f]">
                             Fazer encomenda
                         </button>
