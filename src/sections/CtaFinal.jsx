@@ -1,4 +1,4 @@
-function CtaFinal() {
+function CtaFinal({ aoClicarEncomendar }) {
     return (
         <section id="contato" className="bg-[#faf3ec] px-16 py-24 text-center">
             <div className="mx-auto max-w-2xl">
@@ -12,7 +12,7 @@ function CtaFinal() {
                     Entre em contato e vamos criar juntos algo único para a sua
                     celebração.
                 </p>
-                <button className="mt-8 cursor-pointer rounded-full bg-[#3d2418] px-6 py-3 text-sm text-white transition-colors hover:bg-[#a05a3f]">
+                <button onClick={aoClicarEncomendar} className="mt-8 cursor-pointer rounded-full bg-[#3d2418] px-6 py-3 text-sm text-white transition-colors hover:bg-[#a05a3f]">
                     Fazer encomenda
                 </button>
             </div>

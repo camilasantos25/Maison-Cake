@@ -31,7 +31,7 @@ const bolos = [
     }
 ]
 
-function Cardapio() {
+function Cardapio({ aoClicarEncomendar }) {
     return (
         <section id="bolos" className="bg-[#f4ebe1] px-16 py-20">
             <div className="mx-auto max-w-7xl">
@@ -52,6 +52,7 @@ function Cardapio() {
                             nome={bolo.nome}
                             descricao={bolo.descricao}
                             preco={bolo.preco}
+                            aoClicarEncomendar={aoClicarEncomendar}
                         />
                     ))}
                 </div>

@@ -1,6 +1,6 @@
 import boloHero from '../assets/bolo-hero.webp'
 
-function Hero() {
+function Hero({ aoClicarEncomendar }) {
     return (
         <section id="inicio" className="bg-[#faf3ec] px-16 py-20">
             <div className='mx-auto grid max-w-7xl grid-cols-2 items-center gap-12'>
@@ -21,7 +21,7 @@ function Hero() {
                         <a href='#bolos' className="cursor-pointer rounded-full bg-[#3d2418] px-6 py-3 text-sm text-white transition-colors hover:bg-[#a05a3f]">
                             Ver nossos bolos
                         </a>
-                        <button className="cursor-pointer rounded-full border border-[#3d2418] px-6 py-3 text-sm text-[#3d2418] transition-colors hover:border-[#a05a3f]">
+                        <button onClick={aoClicarEncomendar} className="cursor-pointer rounded-full border border-[#3d2418] px-6 py-3 text-sm text-[#3d2418] transition-colors hover:border-[#a05a3f]">
                             Fazer encomenda
                         </button>
                     </div>
