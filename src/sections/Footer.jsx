@@ -1,8 +1,8 @@
 function Footer() {
     return (
-        <footer className="bg-[#f4ebe1] px-16 py-16 dark:bg-[#1a1109]">
+        <footer className="bg-[#f4ebe1] px-6 py-12 md:px-16 md:py-16 dark:bg-[#1a1109]">
             <div className="mx-auto max-w-7xl">
-                <div className="grid grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
                     <div>
                         <p className="font-serif text-xl font-bold text-[#3d2418] dark:text-[#f4ebe1]">
                             Maison <span className="italic">Cake</span>
@@ -13,7 +13,7 @@ function Footer() {
                             Bolos feitos para celebrar a vida.
                         </p>
                     </div>
-
+ 
                     <div>
                         <p className="text-xs font-semibold tracking-widest text-[#a05a3f]">
                             LINKS RÁPIDOS
@@ -33,7 +33,7 @@ function Footer() {
                             </a>
                         </nav>
                     </div>
-
+ 
                     <div>
                         <p className="text-xs font-semibold tracking-widest text-[#a05a3f]">
                             CONTATO
@@ -45,14 +45,14 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-
+ 
                 <div className="mt-12 border-t border-[#e5dcd0] pt-6 text-center text-xs text-[#6b5347] dark:text-[#c9b8ab]">
                     <p>© 2026 Maison Cake. Todos os direitos reservados.</p>
                 </div>
-
+ 
             </div>
         </footer>
     )
 }
-
+ 
 export default Footer

@@ -1,5 +1,5 @@
 import TestimonialCard from "../components/TestimonialCard"
-
+ 
 const depoimentos = [
     {
         texto: 'O bolo de morango da Maison Cake foi o ponto alto da nossa festa. Todos os convidados pediram o contato da confeitaria!',
@@ -17,19 +17,19 @@ const depoimentos = [
         papel: 'Cliente fiel',
     }
 ]
-
+ 
 function Depoimentos() {
     return (
-        <section className="bg-[#f4ebe1] px-16 py-20 dark:bg-[#1a1109]">
+        <section className="bg-[#f4ebe1] px-6 py-12 md:px-16 md:py-20 dark:bg-[#1a1109]">
             <div className="mx-auto max-w-7xl text-center">
                 <p className="text-xs font-semibold tracking-widest text-[#a05a3f]">
                     DEPOIMENTOS
                 </p>
-                <h2 className="mt-2 font-serif text-4xl font-bold text-[#3d2418] dark:text-[#f4ebe1]">
+                <h2 className="mt-2 font-serif text-3xl font-bold text-[#3d2418] dark:text-[#f4ebe1] md:text-4xl">
                     O que dizem nossos clientes
                 </h2>
-
-                <div className="mt-10 grid grid-cols-3 gap-6 text-left">
+ 
+                <div className="mt-10 grid grid-cols-1 gap-6 text-left md:grid-cols-3">
                     {depoimentos.map((depoimento, index) => (
                         <TestimonialCard
                             key={index}
@@ -42,5 +42,5 @@ function Depoimentos() {
         </section>
     )
 }
-
+ 
 export default Depoimentos

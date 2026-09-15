@@ -1,32 +1,66 @@
+import { useState } from 'react'
+
 function Header({ aoClicarEncomendar, tema, aoClicarTema }) {
+    const [menuAberto, setMenuAberto] = useState(false)
+
+    function alternarMenu() {
+        setMenuAberto(!menuAberto)
+    }
+
     return (
-        <header className="sticky top-0 z-50 flex items-center justify-between border-b border-[#f0e9e0] bg-[#faf3ec]/90 px-8 py-4 shadow-sm backdrop-blur-sm dark:border-[#3d2c22] dark:bg-[#150e0a]/90">
-            <a href="#inicio" className="text-xl font-serif font-bold text-[#3d2418] dark:text-[#f4ebe1]">
-                Maison <span className="italic">Cake</span>
-            </a>
-            <nav className="flex items-center gap-8">
-                <a href="#inicio" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Início</a>
-                <a href="#bolos" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Bolos</a>
-                <a href="#sobre" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Sobre nós</a>
-                <a href="#contato" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Contato</a>
-            </nav>
+        <header className="sticky top-0 z-50 border-b border-[#f0e9e0] bg-[#faf3ec]/90 shadow-sm backdrop-blur-sm dark:border-[#3d2c22] dark:bg-[#150e0a]/90">
+            <div className="flex items-center justify-between px-8 py-4">
+                <a href="#inicio" className="text-xl font-serif font-bold text-[#3d2418] dark:text-[#f4ebe1]">
+                    Maison <span className="italic">Cake</span>
+                </a>
+                <nav className="hidden items-center gap-8 md:flex">
+                    <a href="#inicio" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Início</a>
+                    <a href="#bolos" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Bolos</a>
+                    <a href="#sobre" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Sobre nós</a>
+                    <a href="#contato" className="text-sm text-[#3d2418] transition-colors hover:text-[#a05a3f] dark:text-[#f4ebe1]">Contato</a>
+                </nav>
 
-            <div className="flex items-center gap-4">
-                <button onClick={aoClicarTema} className="cursor-pointer rounded-full border border-[#e5dcd0] p-2 text-[#3d2418] transition-colors hover:border-[#a05a3f] dark:border-[#3d2c22] dark:text-[#f4ebe1]">
-                    {tema === 'light' ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
-                    ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>
-                    )}
-                </button>
+                <div className="flex items-center gap-4">
+                    <button onClick={aoClicarTema} className="cursor-pointer rounded-full border border-[#e5dcd0] p-2 text-[#3d2418] transition-colors hover:border-[#a05a3f] dark:border-[#3d2c22] dark:text-[#f4ebe1]">
+                        {tema === 'light' ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" /></svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" /></svg>
+                        )}
+                    </button>
 
-                <button onClick={aoClicarEncomendar} className="cursor-pointer rounded-full bg-[#3d2418] px-5 py-2 text-sm text-white transition-colors hover:bg-[#a05a3f]">
-                    Encomendar
-                </button>
+                    <button onClick={aoClicarEncomendar} className="hidden cursor-pointer rounded-full bg-[#3d2418] px-5 py-2 text-sm text-white transition-colors hover:bg-[#a05a3f] md:block">
+                        Encomendar
+                    </button>
+
+                    <button
+                        onClick={alternarMenu}
+                        className="flex cursor-pointer items-center justify-center rounded-full border border-[#e5dcd0] p-2 text-[#3d2418] dark:border-[#3d2c22] dark:text-[#f4ebe1] md:hidden">
+                        {menuAberto ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+                        )}
+                    </button>
+                </div>
             </div>
+
+            {menuAberto && (
+                <div className="flex flex-col gap-4 border-t border-[#f0e9e0] px-8 py-6 md:hidden dark:border-[#3d2c22]">
+                    <a href="#inicio" onClick={alternarMenu} className="text-sm text-[#3d2418] dark:text-[#f4ebe1]">Início</a>
+                    <a href="#bolos" onClick={alternarMenu} className="text-sm text-[#3d2418] dark:text-[#f4ebe1]">Bolos</a>
+                    <a href="#sobre" onClick={alternarMenu} className="text-sm text-[#3d2418] dark:text-[#f4ebe1]">Sobre nós</a>
+                    <a href="#contato" onClick={alternarMenu} className="text-sm text-[#3d2418] dark:text-[#f4ebe1]">Contato</a>
+
+                    <button
+                        onClick={aoClicarEncomendar}
+                        className="cursor-pointer rounded-full bg-[#3d2418] px-5 py-2 text-sm text-white transition-colors hover:bg-[#a05a3f]">
+                        Encomendar
+                    </button>
+                </div>
+            )}
         </header>
     )
 }
 
 export default Header
-

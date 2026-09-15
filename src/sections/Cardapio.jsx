@@ -3,7 +3,7 @@ import boloChocolate from '../assets/bolo-chocolate.webp'
 import redVelvet from '../assets/red-velvet.webp'
 import boloMorango from '../assets/bolo-morango.webp'
 import boloLimao from '../assets/bolo-limao.webp'
-
+ 
 const bolos = [
     {
         imagem: boloChocolate,
@@ -30,21 +30,21 @@ const bolos = [
         preco: 'R$ 179',
     }
 ]
-
+ 
 function Cardapio({ aoClicarEncomendar }) {
     return (
-        <section id="bolos" className="bg-[#f4ebe1] px-16 py-20 dark:bg-[#1a1109]">
+        <section id="bolos" className="bg-[#f4ebe1] px-6 py-12 md:px-16 md:py-20 dark:bg-[#1a1109]">
             <div className="mx-auto max-w-7xl">
                 <div>
                     <p className="text-xs font-semibold tracking-widest text-[#a05a3f]">
                         CARDÁPIO
                     </p>
-                    <h2 className="mt-2 font-serif text-4xl font-bold text-[#3d2418] dark:text-[#f4ebe1]">
+                    <h2 className="mt-2 font-serif text-3xl font-bold text-[#3d2418] dark:text-[#f4ebe1] md:text-4xl">
                         Nossos favoritos
                     </h2>
                 </div>
-
-                <div className="mt-10 grid grid-cols-4 gap-6">
+ 
+                <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
                     {bolos.map((bolo, index) => (
                         <ProductCard
                             key={index}
@@ -52,13 +52,12 @@ function Cardapio({ aoClicarEncomendar }) {
                             nome={bolo.nome}
                             descricao={bolo.descricao}
                             preco={bolo.preco}
-                            aoClicarEncomendar={aoClicarEncomendar}
-                        />
+                            aoClicarEncomendar={aoClicarEncomendar} />
                     ))}
                 </div>
             </div>
         </section>
     )
 }
-
+ 
 export default Cardapio

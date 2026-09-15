@@ -1,11 +1,11 @@
 function CtaFinal({ aoClicarEncomendar }) {
     return (
-        <section id="contato" className="bg-[#faf3ec] px-16 py-24 text-center dark:bg-[#150e0a]">
+        <section id="contato" className="bg-[#faf3ec] px-6 py-16 text-center md:px-16 md:py-24 dark:bg-[#150e0a]">
             <div className="mx-auto max-w-2xl">
                 <p className="text-xs font-semibold tracking-widest text-[#a05a3f]">
                     VAMOS CELEBRAR JUNTOS
                 </p>
-                <h2 className="mt-4 font-serif text-4xl font-bold text-[#3d2418] dark:text-[#f4ebe1]">
+                <h2 className="mt-4 font-serif text-3xl font-bold text-[#3d2418] dark:text-[#f4ebe1] md:text-4xl">
                     Seu próximo momento especial começa com um bolo.
                 </h2>
                 <p className="mt-6 text-sm text-[#6b5347] dark:text-[#c9b8ab]">
@@ -19,5 +19,5 @@ function CtaFinal({ aoClicarEncomendar }) {
         </section>
     )
 }
-
+ 
 export default CtaFinal
