@@ -33,13 +33,13 @@ const bolos = [
 
 function Cardapio({ aoClicarEncomendar }) {
     return (
-        <section id="bolos" className="bg-[#f4ebe1] px-16 py-20">
+        <section id="bolos" className="bg-[#f4ebe1] px-16 py-20 dark:bg-[#1a1109]">
             <div className="mx-auto max-w-7xl">
                 <div>
                     <p className="text-xs font-semibold tracking-widest text-[#a05a3f]">
                         CARDÁPIO
                     </p>
-                    <h2 className="mt-2 font-serif text-4xl font-bold text-[#3d2418]">
+                    <h2 className="mt-2 font-serif text-4xl font-bold text-[#3d2418] dark:text-[#f4ebe1]">
                         Nossos favoritos
                     </h2>
                 </div>

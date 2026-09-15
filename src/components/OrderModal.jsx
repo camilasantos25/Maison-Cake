@@ -66,21 +66,21 @@ function OrderModal({ aberto, aoFechar }) {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
-            <div className="w-full max-w-md rounded-2xl bg-white p-6">
+            <div className="w-full max-w-md rounded-2xl bg-white p-6 dark:bg-[#251a13]">
                 <div className="flex items-center justify-between">
-                    <h3 className="font-serif text-xl font-bold text-[#3d2418]">
+                    <h3 className="font-serif text-xl font-bold text-[#3d2418] dark:text-[#f4ebe1]">
                         Fazer encomenda
                     </h3>
                     <button
                         onClick={resetarEFechar}
-                        className="cursor-pointer rounded-full p-2 transition-colors hover:bg-[#f4ebe1]">
+                        className="cursor-pointer rounded-full p-2 transition-colors hover:bg-[#f4ebe1] dark:text-[#f4ebe1] dark:hover:bg-[#3d2c22]">
                         <CloseIcon className="h-5 w-5" />
                     </button>
                 </div>
 
                 <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
                     <div>
-                        <label className="text-xs font-semibold text-[#3d2418]">
+                        <label className="text-xs font-semibold text-[#3d2418] dark:text-[#f4ebe1]">
                             Seu nome
                         </label>
                         <input
@@ -88,14 +88,14 @@ function OrderModal({ aberto, aoFechar }) {
                             placeholder="Ana Silva"
                             value={dados.nome}
                             onChange={(event) => handleChange('nome', event.target.value)}
-                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:border-[#a05a3f] ${erros.nome ? 'border-red-400' : 'border-[#e5dcd0]'}`} />
+                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm text-[#3d2418] outline-none focus:border-[#a05a3f] dark:bg-[#1a1109] dark:text-[#f4ebe1] ${erros.nome ? 'border-red-400' : 'border-[#e5dcd0] dark:border-[#3d2c22]'}`} />
 
                         {erros.nome && (
                             <p className="mt-1 text-xs text-red-500">{erros.nome}</p>
                         )}
                     </div>
                     <div>
-                        <label className="text-xs font-semibold text-[#3d2418]">
+                        <label className="text-xs font-semibold text-[#3d2418] dark:text-[#f4ebe1]">
                             WhatsApp
                         </label>
                         <input
@@ -103,20 +103,20 @@ function OrderModal({ aberto, aoFechar }) {
                             placeholder="(11) 99999-9999"
                             value={dados.whatsapp}
                             onChange={(event) => handleChange('whatsapp', event.target.value)}
-                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:border-[#a05a3f] ${erros.whatsapp ? 'border-red-400' : 'border-[#e5dcd0]'}`} />
+                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm text-[#3d2418] outline-none focus:border-[#a05a3f] dark:bg-[#1a1109] dark:text-[#f4ebe1] ${erros.whatsapp ? 'border-red-400' : 'border-[#e5dcd0] dark:border-[#3d2c22]'}`} />
 
                         {erros.whatsapp && (
                             <p className="mt-1 text-xs text-red-500">{erros.whatsapp}</p>
                         )}
                     </div>
                     <div>
-                        <label className="text-xs font-semibold text-[#3d2418]">
+                        <label className="text-xs font-semibold text-[#3d2418] dark:text-[#f4ebe1]">
                             Sabor desejado
                         </label>
                         <select
                             value={dados.sabor}
                             onChange={(event) => handleChange('sabor', event.target.value)}
-                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:border-[#a05a3f] ${erros.sabor ? 'border-red-400' : 'border-[#e5dcd0]'}`}>
+                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm text-[#3d2418] outline-none focus:border-[#a05a3f] dark:bg-[#1a1109] dark:text-[#f4ebe1] ${erros.sabor ? 'border-red-400' : 'border-[#e5dcd0] dark:border-[#3d2c22]'}`}>
                             <option value="">Selecione um sabor</option>
                             <option value="Bolo de Chocolate">Bolo de Chocolate</option>
                             <option value="Red Velvet">Red Velvet</option>
@@ -129,21 +129,21 @@ function OrderModal({ aberto, aoFechar }) {
                         )}
                     </div>
                     <div>
-                        <label className="text-xs font-semibold text-[#3d2418]">
+                        <label className="text-xs font-semibold text-[#3d2418] dark:text-[#f4ebe1]">
                             Data do evento
                         </label>
                         <input
                             type="date"
                             value={dados.data}
                             onChange={(event) => handleChange('data', event.target.value)}
-                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:border-[#a05a3f] ${erros.data ? 'border-red-400' : 'border-[#e5dcd0]'}`} />
+                            className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm text-[#3d2418] outline-none focus:border-[#a05a3f] dark:bg-[#1a1109] dark:text-[#f4ebe1] ${erros.sabor ? 'border-red-400' : 'border-[#e5dcd0] dark:border-[#3d2c22]'}`} />
 
                         {erros.data && (
                             <p className="mt-1 text-xs text-red-500">{erros.data}</p>
                         )}
                     </div>
                     <div>
-                        <label className="text-xs font-semibold text-[#3d2418]">
+                        <label className="text-xs font-semibold text-[#3d2418] dark:text-[#f4ebe1]">
                             Observações
                         </label>
                         <textarea
@@ -151,7 +151,7 @@ function OrderModal({ aberto, aoFechar }) {
                             rows={3}
                             value={dados.observacoes}
                             onChange={(event) => handleChange('observacoes', event.target.value)}
-                            className="mt-1 w-full rounded-lg border border-[#e5dcd0] bg-white px-3 py-2 text-sm outline-none focus:border-[#a05a3f]" />
+                            className="mt-1 w-full rounded-lg border border-[#e5dcd0] bg-white px-3 py-2 text-sm text-[#3d2418] outline-none focus:border-[#a05a3f] dark:border-[#3d2c22] dark:bg-[#1a1109] dark:text-[#f4ebe1]" />
                     </div>
 
                     <button

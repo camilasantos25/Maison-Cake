@@ -1,13 +1,13 @@
 function ProductCard({ imagem, nome, descricao, preco, aoClicarEncomendar }) {
     return (
-        <div className="group overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-lg">
+        <div className="group overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-lg dark:bg-[#251a13]">
             <img src={imagem} alt={nome} className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-110" />
 
             <div className="p-7">
-                <h3 className="font-serif text-lg font-bold text-[#3d2418]">
+                <h3 className="font-serif text-lg font-bold text-[#3d2418] dark:text-[#f4ebe1]">
                     {nome}
                 </h3>
-                <p className="mt-1 text-sm text-[#6b5347]">
+                <p className="mt-1 text-sm text-[#6b5347] dark:text-[#c9b8ab]">
                     {descricao}
                 </p>
                 <div className="mt-6 flex items-center justify-between">
